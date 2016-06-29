@@ -5,7 +5,7 @@ RUN mkdir -p /root/app
 WORKDIR /root/app
 
 ONBUILD COPY ./package.json /root/app/
-ONBUILD RUN npm install
+ONBUILD RUN npm install --production
 # ONBUILD COPY . /root/app
 
 CMD ["npm", "start"]
